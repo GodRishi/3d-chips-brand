@@ -10,6 +10,7 @@ import SocialProof from './components/SocialProof';
 import CtaBand from './components/CtaBand';
 import Footer from './components/Footer';
 import StoreModal from './components/StoreModal';
+import Watermark from './components/Watermark';
 
 export default function App() {
   const [storeModalOpen, setStoreModalOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-[#F5F1E8] font-sans selection:bg-[#E85D04] selection:text-white">
+    <div className="min-h-screen bg-[#080808] text-[#F5F1E8] font-sans selection:bg-[#E85D04] selection:text-white">
       {/* Glassmorphic Navigation */}
       <Navbar onOpenStoreModal={handleOpenStoreModal} />
 
@@ -60,6 +61,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Floating Creator Watermark Badge */}
+      <Watermark />
 
       {/* Interactive Store Finder & Sample Modal */}
       <StoreModal isOpen={storeModalOpen} onClose={handleCloseStoreModal} />
